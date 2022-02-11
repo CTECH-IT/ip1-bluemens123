@@ -384,8 +384,8 @@ function draw() {
     y += dy;
     // switch direction, tally score, produce spikes on other side, hide spikes on side and detect collision 
     if (x + dx > canvas.width - characterRadius || x + dx < characterRadius) {
-        
-        dx = -dx;
+        //switch direction and change direction
+        dx = -dx * 1.1; 
         score++;
         
         //difficulty increase
