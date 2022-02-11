@@ -385,14 +385,14 @@ function draw() {
     // switch direction, tally score, produce spikes on other side, hide spikes on side and detect collision 
     if (x + dx > canvas.width - characterRadius || x + dx < characterRadius) {
         //switch direction and change direction
-        dx = -dx * 1.1; 
+        dx = -dx * 1.05; 
         score++;
         
         //difficulty increase
 
         randomDecider = Math.floor(Math.random() * 2) + 1;
     }
-    if (y > (canvas.height - 50) - characterRadius || y < 0) {
+    if (y > (canvas.height - 50) - characterRadius || y < 50) {
         alert("GAME OVER");
         clearInterval(interval);
         document.location.reload();
