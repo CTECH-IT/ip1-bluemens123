@@ -350,13 +350,15 @@ function drawTrianglePosition6() {
 }
 
 function drawScore() {
+    ctx.textAlign = "center"; 
+    ctx.baseline = "middle";
     ctx.font = "48px Arial";
     ctx.fillStyle = "#0095DD";
-    ctx.fillText(score, 155, 240);
+    ctx.fillText(score, 160, 256);
 }
 function drawCircle() {
     ctx.beginPath(); 
-    ctx.arc(168, 225, 50, 0, Math.PI*2)
+    ctx.arc(160, 240, 50, 0, Math.PI*2)
     ctx.fillStyle = "#a2a2a2"; 
     ctx.fill(); 
 }
@@ -385,7 +387,7 @@ function draw() {
     // switch direction, tally score, produce spikes on other side, hide spikes on side and detect collision 
     if (x + dx > canvas.width - characterRadius || x + dx < characterRadius) {
         //switch direction and change direction
-        dx = -dx * 1.05; 
+        dx = -dx * 1.1; 
         score++;
         
         //difficulty increase
